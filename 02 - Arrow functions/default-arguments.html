@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Default Arguments</title>
+	<meta charset="UTF-8">
+	<title>Default Arguments</title>
 </head>
 <body>
 <script>
-  function calculateBill(total, tax = 0.13, tip = 0.15) {
-    return total + (total * tax) + (total * tip);
-  }
-
-  const totalBill = calculateBill(100, undefined, 0.25);
-  console.log(totalBill);
+	function calculateBill(total, tax = 0.13, tip = 0.15) {
+		return total + (total * tax) + (total * tip);
+	}
+	const totalBill = calculateBill(100, undefined, 0.25);
+	console.log(totalBill); // default arguements work that if something isnt passed these are the values you used. you used to have to type an if statement but now thats what you have to pass.
 </script>
 </body>
 </html>

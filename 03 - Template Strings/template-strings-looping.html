@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Template Strings!</title>
+	<meta charset="UTF-8">
+	<title>Template Strings!</title>
 </head>
 <body>
 <script>
-  const dogs = [
-    { name: 'Snickers', age: 2 },
-    { name: 'Hugo', age: 8 },
-    { name: 'Sunny', age: 1 }
-  ];
+	const dogs = [
+		{ name: 'Snickers', age: 2 },
+		{ name: 'Hugo', age: 8 },
+		{ name: 'Sunny', age: 1 }
+	];
+//in line 19 we are saying please map out the dogs and return a string.
+// line 19 - 24 is a template string within a template string.the intent is to loop thru the dogs and display their "dog age" 
 
-  const markup = `
-    <ul class="dogs">
-      ${dogs.map(dog => `
-        <li>
-          ${dog.name}
-          is
-          ${dog.age * 7}
-        </li>`).join('')}
-    </ul>
-  `;
-  document.body.innerHTML = markup;
+	const markup = `
+		<ul class="dogs">
+			${dogs.map(dog => `
+				<li>
+					${dog.name}
+					is
+					${dog.age * 7}
+				</li>`).join('')}
+		</ul>
+	`;
+	document.body.innerHTML = markup;
 
 </script>
 </body>
